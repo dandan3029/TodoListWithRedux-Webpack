@@ -1,0 +1,40 @@
+@import '~antd/dist/antd.css';
+.todo-app {
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    padding: 50px;
+    position: absolute;
+    border: 1px solid #000;
+}
+
+.add-todo {
+    display: flex;
+    justify-content: space-between;
+    .new-todo{
+        margin-right: 20px;
+        width: 65%;
+        margin-left: 3%;
+    }
+    .add-btn {
+        width: 20%;
+        font-size:10px;
+    }
+}
+
+.todo-list{
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+.todo-item {
+    height: 30px;
+    line-height: 30px;
+    .toggle {
+        margin-right: 10px;
+    }
+    .remove {
+        float: right;
+        border: none;
+    }
+}
