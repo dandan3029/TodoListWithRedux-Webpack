@@ -144,3 +144,5 @@ devtool: 'inline-source-map',
 至此，我们的webpack已经可以打包含有scss文件，图片，jsx语法的react-redux项目，并且可以在浏览器中实时更新，以及源码的映射。
 希望能对优秀的你有所帮助^_^
 happy hacking^_^
+
+当然，如果你想要简单地尝试一下webpack的魅力，可以将本代码下载，然后命令行项目目录下运行 npm install，成功后运行npm start 即可。
