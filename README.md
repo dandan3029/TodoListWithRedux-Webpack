@@ -72,9 +72,20 @@ module: {
 }
 ```
 
+#### 四. 在项目根目录中新建文件.babelrc
+在改文件中写入以下代码：
+```js
+{
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "comments": false
+}
+```
+
 至此，所有打包相关的依赖都已经安装完毕了，接下来需要写一些接口相关的配置。
 
-#### 四. 在项目根目录中新建文件夹dist
+#### 五. 在项目根目录中新建文件夹dist
 在dist文件夹中新建一个index.html文件（项目打包后的入口文件），并写入以下代码：
 ```html
 <!DOCTYPE html>
@@ -91,7 +102,7 @@ module: {
 </html>
 ```
 
-#### 五. 修改配置文件webpack.config.js
+#### 六. 修改配置文件webpack.config.js
 添加如下代码：
 ```js
 var path = require('path');
@@ -118,7 +129,7 @@ performance: {
 
 另外，像以上所说的如果我们每次改动代码，都需要在命令行中执行npx webpack命令，然后浏览器打开静态文件index.html就显得过于麻烦，所以我们选择本地服务器的方法来进行实时自动更新。
 
-#### 六. webpack-dev-server
+#### 七. webpack-dev-server
 * 在命令行中项目路径下运行： npm install --save-dev
 * 修改配置文件，添加如下代码
 ```js
@@ -134,7 +145,7 @@ devServer: {
 ```
 * 命令行运行npm start， 此时浏览器会跳转到localhost: 3000 。之后再改动代码之后会自动打包，并在浏览器中自动刷新，这样会使开发更加方便。
 
-#### 七. bundle.js与源代码之间的映射
+#### 八. bundle.js与源代码之间的映射
 如果需要调试代码时，浏览器报错bundle.js中出现错误，然而我们并不知道源代码中的哪个文件中的哪一行出现了错误，这样就对调试造成了极大的不便。为了解决这个问题，可以使用source-map。
 * 在webpack.config.js中添加如下代码：
 ```js
